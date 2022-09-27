@@ -1,0 +1,23 @@
+app:
+  port: ':8000'
+
+cryptoProviders:
+  coinMarketCap:
+    url: 'https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/lates'
+    headerName: 'X-CMC_PRO_API_KEY'
+  binance:
+    url: 'https://api.binance.com/api/v3/ticker/price'
+  coinAPI:
+    url: 'https://rest.coinapi.io/v1/exchangerate/{base}/{quote}'
+    headerName: 'X-CoinAPI-Key'
+  coinbase:
+    url: 'https://api.coinbase.com/v2/prices/{base}-{quote}/spot'
+
+emailSending:
+  senderAddress: 'krokkozerro@gmail.com'
+
+database:
+  filePath: './data/data.json'
+
+cache:
+  rateCacheTTL: 5m
